@@ -11,6 +11,10 @@ p {
     letter-spacing: 1px;
 }
 
+#tech-learning {
+    border: 2px solid black
+}
+
 body {
     width: 600px;
     margin: 0 auto;

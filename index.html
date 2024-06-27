@@ -1,27 +1,39 @@
 <!doctype html>
 <html lang="en-US">
   <head>
+    <meta name="author" content="Caleb Bucci" />
+    <meta
+        name="description"
+        content="This resume web page aims to provide professional information 
+        about software engineer Caleb Bucci as a way of showcasing skills and projects."/>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <link href="styles/style.css" rel="stylesheet" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     <title>Resume | CJB</title>
   </head>
   <body>
+    <ul>
+        <li>Home</li>
+        <li><a href="pages/projects.html">Projects</a></li>
+        <li><a href="pages/about.html">About</a></li>
+    </ul>
     <h1>Resume</h1>
     <img align="right" src="images/bitmoji.png" alt="Animated profile picture" />
 
     <p id="intro">
         I will be using this webpage as the home of all of my projects, as a single page for a resume
-         isn't always sufficient.  This is a WIP.  My goal is to eventually turn this into a React webpage, 
+         isn't always sufficient.  This is a <a title="Work in Progress"><strong><em>WIP</em></strong></a>.  My goal is to eventually turn this into a React webpage, 
          and to apply the knowledge I learn from making this webpage into my other projects.  I am more
          of a backend developer, so this is rather new to me.
     </p>
-    <p id="tech-learning">
-    <h3>Technologies I want to learn soon (or relearn):</h3>
-    <ul>
+
+    <h2>Technologies I want to learn soon (or relearn):</h2>
+
+    <ul id="tech-learning">
         <li>Javascript</li>
         <li>Typescript</li>
         <li>React</li>
@@ -55,15 +67,17 @@
         <li>Kubernetes</li>
         <li>Docker</li>
     </ul>
-    </p>
 
-    <p>
+
     <a href="https://www.linkedin.com/in/caleb-bucci-59379922b/" target="_blank" rel="noopener noreferrer">Here's my LinkedIn</a>
-
+    <p>
         Wish me luck!
     </p>
 
+    <button>Change user</button>
 
 
+
+    <script src="scripts/main.js"></script>
   </body>
 </html>
