@@ -4,16 +4,6 @@ html {
     font-style: normal;
     background-color: #737472;
   }
-  
-p {
-    font-size: 16px; 
-    line-height: 1.5;
-    letter-spacing: 1px;
-}
-
-#tech-learning {
-    border: 2px solid black
-}
 
 body {
     width: 600px;
@@ -21,12 +11,49 @@ body {
     background-color: white;
     padding: 0 20px 20px 20px;
     border: 5px solid black;
+    font-size: 16px; 
+    line-height: 1.5;
+    letter-spacing: 1px;
 
+}
+  
+p {
+    font-size: 16px; 
+    line-height: 1.5;
+    letter-spacing: 1px;
 }
 
 h1 {
     font-size: 40px;
     text-align: center;
     text-shadow: 3px 3px 1px rgb(168, 168, 168);
+    border-bottom: 1px solid black
 }
+
+
+a:hover {
+    text-decoration: none;
+  }
+
+
+.confident-tech:hover,
+.mostly-known-tech:hover {
+    text-decoration: wavy underline; 
+}
+
+.confident-tech {
+    color : green;
+
+
+}
+
+.mostly-known-tech {
+    color: orange
+}
+
+#tech-learning {
+    border: 2px solid black
+}
+
+
 
