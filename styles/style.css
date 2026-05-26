@@ -1,5 +1,32 @@
-html {
+* {
     font-family: "Ubuntu", sans-serif;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex: 1
+
+}
+.home-button {
+    flex: 4;
+}
+
+
+
+
+
+
+/* 
+
+html {
     font-weight: 400;
     font-style: normal;
     background-color: #737472;
@@ -56,4 +83,4 @@ a:hover {
 }
 
 
-
+ */
