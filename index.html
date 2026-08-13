@@ -2,66 +2,400 @@
 <html lang="en-US">
 
   <head>
+    <meta charset="utf-8" />
     <meta name="author" content="Caleb Bucci" />
     <meta
         name="description"
-        content="This resume web page aims to provide professional information 
-        about software engineer Caleb Bucci as a way of showcasing skills and projects."/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
+        content="Caleb Bucci - Software Engineer. Based in Austin, Texas; from Ohio.
+        M.S C.S. UT Austin May 2026. B.S. C.S.E. OSU December 2023. 
+        Full Stack, Mobile, and Machine Learning."/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="canonical" href="https://calebbucci.com">
+    
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Caleb Bucci - Software Engineer">
+    <meta property="og:description" content="Caleb Bucci - Software Engineer. 
+        Based in Austin, Texas; from Ohio. M.S C.S. UT Austin May 2026. 
+        B.S. C.S.E. OSU December 2023. Full Stack, Mobile, and Machine Learning.">
+    <meta property="og:url" content="https://calebbucci.com">
+
+    
+
     <link href="styles/style.css" rel="stylesheet" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="images/bitmoji.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400..700" rel="stylesheet">
     <title>Caleb Bucci - Software Engineer</title>
   </head>
 
   <body>
-    <header>
-        <nav class="nav">
-            <a class="home-button" href="#">Home</a>
-            <div class="nav-buttons">
-                <a class="other-nav-buttons" href="#about">About</a>
-                <a class="other-nav-buttons" href="#projects">Projects</a>
-                <a class="other-nav-buttons" href="#skills">Skills</a>
-                <a class="other-nav-buttons" href="#contact">Contact</a>
-                <div class="empty"></div>
-            </div>
 
-        </nav>
-        <h1>Caleb Bucci</h1>
+    <!-- Navigation Bar -->
+    <nav class="nav wrap">
+        <a class="home-button" href="#">Home</a>
+        <div class="nav-buttons">
+            <!-- <a class="other-nav-buttons" href="#about">About</a> -->
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a class="contact" href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Header / Hero Landing Section -->
+    <header class="hero wrap">
+        <div class="hero-text">
+            <h1>Caleb Bucci</h1>
+            <p class="tagline">
+                Hey! I'm a software engineer who's built backend services, mobile apps, and 
+                machine learning models from scratch. Feel free to check out what I've been 
+                working on <a href="#projects">here</a>. Currently open to new roles. 
+            </p>
+        </div>
+        <img id="profile-pic" width="178" height="178" src="images/bitmoji.png" alt="Cartoon profile picture of Caleb Bucci" />
     </header>
 
-    
+    <!-- Main Content -->
+    <main class="wrap" id="main">
+        
+        <!-- Projects -->
+        <section id="projects">
+            <h2 class="section-header">Projects</h2>
 
-    <img src="images/bitmoji.png" alt="Animated profile picture" />
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        Austin Custom Home Build Platform
+                        <a href="https://remishi.com" target="_blank" rel="noopener">remishi.com</a>
+                    </h3>
+                    <span class="time-period">May 2026 - Present</span>
+                </div>
+                <p class="entry-summary">
+                    A platform that helps homeowners find buildable lots, understand the constraints
+                    on them, and assemble the team needed to actually build.
+                </p>
+                <ul>
+                    <li>
+                        Architected the full-stack application in Next.js and FastAPI, backed by 
+                        PostgreSQL with PostGIS for geospatial lot queries, deployed via Railway
+                        and Vercel.
+                    </li>
+                    <li>
+                        Built an agent pipeline with role-scoped tool access to automate parts
+                         of the software development workflow.
+                    </li>
+                    <li>
+                        Designed agents that convert acceptance criteria into frozen tests, and
+                        gate any compliance-affecting (sensitive) change behind human approval.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
 
-    <main>
-        <article>
-            <p>
-                Hello! I'm Caleb, and I'm a backend software engineer
-            </p>
-            <p>
-                I will be using this webpage as the home of all of my projects, as a single page for a resume
-                isn't always sufficient.  This is a <a title="Work in Progress"><strong><em>WIP</em></strong></a>.  
-                My goal is to eventually turn this into a React webpage, and to apply the knowledge I learn 
-                from making this webpage into my other projects.  I am more of a backend developer, so this is rather new to me.
-            </p>
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        Per-Patient HbA1c Prediction &amp; Prediabetes Screener
+                        <a>View Report: TODO</a>
+                    </h3>
+                    <span class="time-period">March 2026 - Present</span>
+                </div>
+                <p class="entry-summary">
+                    More 1 in 3 American adults are classified as prediabetic. This project can screen 
+                    for prediabetes using five features a patient can measure themselves. It can also
+                    predict continuous HbA1c levels if a patient has existing lab data.
+                </p>
+                <ul>
+                    <li>
+                        Trained an XGBoost regression on NHANES 2021-2023 dataset to predict
+                        continuous HbA1c, achieving a tolerance of 0.39%.
+                    </li>
+                    <li>
+                        Reframed the task as a binary screener for prediabetes (HbA1c &ge; 5.7),
+                        reaching 0.76 holdout ROC AUC.
+                    </li>
+                    <li>
+                        Applied SHAP attribution to surface the most influential biomarkers per patient;
+                        the top features aligned with established clinical literature.
+                    </li>
+                    <li>
+                        Served the model end-to-end to a SwiftUI iOS app through a FastAPI REST endpoint.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
 
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        ELECTRA QA Model
+                        <a>View Report: TODO</a>
+                    </h3>
+                    <span class="time-period">November 2025 - December 2025</span>
+                </div>
+                <p class="entry-summary">
+                    A study to determine where extractive question-answering models fail, and whether
+                    targeted adversarial data can repair those failures and improve the model.
+                </p>
+                <ul>
+                    <li>
+                        Fine-tuned ELECTRA-small on SQuAD for extractive QA, then ran behavioral testing
+                        with CheckList across categories including negation, coreference, and temporal reasoning.
+                    </li>
+                    <li>
+                        Compared three fine-tuning strategies using LoRA adapters.
+                    </li>
+                    <li>
+                        Generated adversarial examples from the failed categories and AdvSQuAD, cutting
+                        the CheckList failure rate from 62% to 43%.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
 
-        </article>
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        Pass The Aux
+                        <a>View Source/Demo?: TBD</a>
+                    </h3>
+                    <span class="time-period">January 2025 - April 2025</span>
+                </div>
+                <p class="entry-summary">
+                    A mobile app for Android devices developed in Kotlin which allowed users to 
+                    share their music listening habits with their friends as well as share music directly.
+                </p>
+                <ul>
+                    <li>
+                        Implemented Spotify OAuth 2.0 with PKCE, Firebase Firestore/Storage for shared
+                        multi-user state, and a media player where users could upload, download,
+                        and play each other's MP3s.
+                    </li>
+                    <li>
+                        Displays Spotify and local listening history on each user's profile.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience">
+            <h2 class="section-header">Experience</h2>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        AI Data Specialist
+                    </h3>
+                    <span class="time-period">June 2024 - Present</span>
+                </div>
+                <p class="role">DataAnnotation | Remote | Contract/Part-Time</p>
+                <ul>
+                    <li>
+                        Designed adversarial prompts in Python, Java, and JavaScript that expose
+                        code and logic errors in LLMs, improving training data quality.
+                    </li>
+                    <li>
+                        Wrote reference solutions and completed rubric-based evaluations of 
+                        model output, feeding failures into RLHF pipelines.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        Software Engineer
+                    </h3>
+                    <span class="time-period">May 2023 - April 2024</span>
+                </div>
+                <p class="role">Trimble Inc. | Dayton, Ohio | Internship</p>
+                <ul>
+                    <li>
+                        Resolved a critical bug in Firebase user engagement tracking, reducing
+                        inflated metrics by 78.9%.
+                    </li>
+                    <li>
+                        Updated OEM attachment naming in Earthworks GO across both data storage
+                        and UI, in Swift and Android (Java).
+                    </li>
+                    <li>
+                        Developed a Python feature to automate license generation, streamlining
+                        App Store compliance.
+                    </li>
+                    <li>
+                        Optimized the translation process by removing over 3,000 redundant lines,
+                        cutting translation costs by 49%.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        Software Engineer
+                    </h3>
+                    <span class="time-period">June 2022 - August 2022</span>
+                </div>
+                <p class="role">General Motors | Warren, Michigan | Internship</p>
+                <ul>
+                    <li>
+                        Built a C test suite for an embedded display unit and rearview camera, 
+                        validating video integrity and latency.
+                    </li>
+                    <li>
+                        Diagnosed camera glitches by injecting simulated temperature readings 
+                        to test the firmware's overheating response.
+                    </li>
+                </ul>
+                <p class="stack">Stack: TODO</p>
+            </article>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2 class="section-header">Education</h2>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        M.S. Computer Science
+                    </h3>
+                    <span class="time-period">January 2025 - May 2026</span>
+                </div>
+                <p class="role">University of Texas at Austin | GPA: 3.97</p>
+                <div class="note">
+                    <strong>Coursework:</strong>
+                    <ul>
+                        <li>Deep Learning</li>
+                        <li>Advances in Deep Learning</li>
+                        <li>Machine Learning</li> 
+                        <li>Advances in Deep Generative Models</li> 
+                        <li>Natural Language Processing</li> 
+                        <li>Parallel Systems</li> 
+                        <li>Advanced Operating Systems</li>
+                        <li>Android Programming</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <h3>
+                        B.S. Computer Science &amp; Engineering
+                    </h3>
+                    <span class="time-period">August 2019 - December 2023</span>
+                </div>
+                <p class="role">The Ohio State University | GPA: 3.85</p>
+                <p class="note">
+                    Mathematics minor, AI specialization, Dean's List
+                </p>
+            </article>
+
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2 class="section-header">Skills</h2>
+
+            <!-- Languages -->
+            <article class="skills">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Kotlin</li>
+                    <li>Swift</li>
+                    <li>C/C++</li>
+                    <li>JavaScript</li>
+                    <li>TypeScript</li>
+                    <li>HTML/CSS</li>
+                    <li>SQL</li>
+                </ul>
+            </article>
+
+            <!-- Tools & Frameworks -->
+            <article class="skills">
+                <h3>Tools &amp; Frameworks</h3>
+                <ul>
+                    <li>FastAPI</li>
+                    <li>React</li>
+                    <li>Next.js</li>
+                    <li>SwiftUI</li>
+                    <li>Docker</li>
+                    <li>Git</li>
+                    <li>REST APIs</li>
+                    <li>Linux</li>
+                    <li>Android SDK</li>
+                </ul>
+            </article>
+            
+            <!-- Data & Deployment -->
+            <article class="skills">
+                <h3>Data &amp; Deployment</h3>
+                <ul>
+                    <li>PostgreSQL</li>
+                    <li>PostGIS</li>
+                    <li>AWS S3</li>
+                    <li>CloudFront</li>
+                    <li>ACM</li>
+                    <li>IAM</li>
+                    <li>Firebase</li>
+                    <li>Railway</li>
+                    <li>Vercel</li>
+                </ul>
+            </article>
+
+            <!-- ML / AI -->
+            <article class="skills">
+                <h3>ML / AI</h3>
+                <ul>
+                    <li>PyTorch</li>
+                    <li>TensorFlow</li>
+                    <li>HuggingFace</li>
+                    <li>Scikit-learn</li>
+                    <li>NumPy</li>
+                    <li>Pandas</li>
+                    <li>Jupyter</li>
+                </ul>
+            </article>
+
+        </section>
+
     </main>
 
-    <footer>
-        <a href="https://www.linkedin.com/in/caleb-bucci-59379922b/" target="_blank" rel="noopener noreferrer">Here's my LinkedIn</a>
-        <p>
-            Wish me luck!
+    <!-- Contact Information -->
+    <footer id="contact" class="wrap">
+        <h2 class="section-header">Get in Touch</h2>
+        <p class="footer-summary">
+            I'm searching for backend and ML roles, and I'm happy to talk through anything
+            on this page. Email is the fastest way to reach me, and thanks again for looking
+            through my site :)
         </p>
+
+        <button id="copy-email-button" type="button">
+            calebbucci13@gmail.com
+            <span class="icon i-copy"></span>
+            <span class="icon i-check"></span>
+        </button>
+        <nav class="contact-links">
+            <a href="mailto:calebbucci13@gmail.com" class="i-mail"></a>
+            <a href="https://www.linkedin.com/in/caleb-bucci" class="i-linkedin" 
+                target="_blank" rel="noopener"></a>
+            <a href="https://www.github.com/Cbooch13" class="i-github"
+                target="_blank" rel="noopener"></a>
+        </nav>
+        
     </footer>
 
 
 
     <script src="scripts/main.js"></script>
+    
   </body>
 </html>

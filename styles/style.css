@@ -1,23 +1,157 @@
-* {
-    font-family: "Ubuntu", sans-serif;
+:root {
+    --bg:        #101216;
+    --surface:   #161920;
+    --ink:       #e8eaed;
+    --ink-soft:  #a8b0bb;
+    --ink-faint: #6f7883;
+    --rule:      #262b33;
+    --accent:    #6db3e0;
+    --accent-bg: #16222c;
+
+    --max-text: 46rem;
+    --max-content: 64rem;
+    --max-nav: 80rem;
+    --nav-height: 4rem;
+
+    --font-size: 18px;
+    --sans: "Ubuntu Sans", "Ubuntu", "Inter", sans-serif;
 }
 
+*, *::before, *::after {
+    font-family: var(--sans);
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--nav-height);
+}
+
+body {
+    margin: 0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family: var(--sans);
+    line-height: 1.65;
+    font-size: var(--font-size)
+}
+
+.wrap {
+    max-width: var(--max-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+}
+
+a {
+    color: var(--accent);
+    text-underline-offset: 4px; /* Moves underline away from long bottom letters (g, y, p, etc) */
+    text-decoration-thickness: 1px;
+}
+
+a:hover {
+    text-decoration-thickness: 2px;
+}
+
+
 .nav {
+    position: sticky;
     display: flex;
-    justify-content: space-between;
+    z-index: 20;
+    top: 0;
+
+    align-items: center;
+    /* gap: 1.5rem;
     padding: 10px;
+    background: #fff; */
+
+    border-bottom: 1px solid transparent;
+    transition: border-color .2s;
+
+    background: color-mix(in srgb, var(--bg), transparent);
+    backdrop-filter: saturate(180%) blur(12px);
+    max-width: var(--max-nav);
 }
 
 .nav-buttons {
     display: flex;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    flex: 1
+    align-items: center;
+    gap: 1.5rem;
+    height: var(--nav-height);
+    margin-left: auto;
+}
 
-}
 .home-button {
-    flex: 4;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--ink);
+    text-decoration: none;
 }
+
+.nav-buttons a {
+    font-weight: 500;
+    font-size: 0.95rem;
+    position: relative;
+
+    padding: .4rem .7rem;
+    border-radius: 6px;
+
+    color: var(--ink-faint);
+    text-decoration: none;
+    white-space: nowrap;
+
+    transition: color 0.15s, background-color 0.15s;
+}
+
+.nav-buttons a:hover {
+    color: var(--ink);
+    background: var(--accent-bg);
+}
+
+.nav-buttons a.active {
+    color: var(--accent);
+}
+
+.nav-buttons .contact {
+    border: 1px solid var(--rule);
+    color: var(--ink-soft);
+    background: var(--accent);
+    border-color: var(--ink);
+    color: #fff;
+}
+
+.nav-buttons .contact:hover {
+    background:var(--ink);
+    border-color: var(--ink);
+    color: var(--bg);
+     
+}
+
+#profile-pic {
+    outline: 3px solid var(--ink);
+    outline-offset: -3px;
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 11rem;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+}
+
+#remishi-header {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+
 
 
 
