@@ -18,6 +18,7 @@
         Based in Austin, Texas; from Ohio. M.S C.S. UT Austin May 2026. 
         B.S. C.S.E. OSU December 2023. Full Stack, Mobile, and Machine Learning.">
     <meta property="og:url" content="https://calebbucci.com">
+    <meta property="og:image" content="https://calebbucci.com/bitmoji_upscaled.png">
 
     
 
@@ -25,36 +26,42 @@
     <link rel="icon" href="images/bitmoji.png" type="image/png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Sans:wght@400..700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400..700&family=Ubuntu+Sans:wght@400..700&display=swap" rel="stylesheet">
     <title>Caleb Bucci - Software Engineer</title>
   </head>
 
   <body>
 
     <!-- Navigation Bar -->
-    <nav class="nav wrap">
-        <a class="home-button" href="#">Home</a>
-        <div class="nav-buttons">
-            <!-- <a class="other-nav-buttons" href="#about">About</a> -->
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a class="contact" href="#contact">Contact</a>
+    <nav class="nav">
+        <div class="nav-inner wrap">
+            <a class="home-button" href="#">Home</a>
+            <div class="nav-buttons">
+                <!-- <a class="other-nav-buttons" href="#about">About</a> -->
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a class="contact" href="#contact">Contact</a>
+            </div>
         </div>
     </nav>
 
     <!-- Header / Hero Landing Section -->
-    <header class="hero wrap">
-        <div class="hero-text">
-            <h1>Caleb Bucci</h1>
-            <p class="tagline">
-                Hey! I'm a software engineer who's built backend services, mobile apps, and 
-                machine learning models from scratch. Feel free to check out what I've been 
-                working on <a href="#projects">here</a>. Currently open to new roles. 
-            </p>
+    <header class="hero" id="home">
+        <div class="hero-inner wrap">
+            <div class="hero-text">
+                <h1>Caleb Bucci</h1>
+                <p class="tagline">
+                    Hey! I'm a software engineer who's built backend services, mobile apps, and 
+                    machine learning models from scratch. Feel free to check out what I've been 
+                    working on <a href="#projects">here</a>. Currently open to new roles. 
+                </p>
+                <a class="view-pdf-button" href="files/Bucci_Caleb_Resume.pdf" 
+                    target="_blank" rel="noopener">View Resume (PDF)</a>
+            </div>
+            <img id="profile-pic" width="712" height="712" src="images/bitmoji_upscaled.png" alt="Cartoon profile picture of Caleb Bucci" />
         </div>
-        <img id="profile-pic" width="178" height="178" src="images/bitmoji.png" alt="Cartoon profile picture of Caleb Bucci" />
     </header>
 
     <!-- Main Content -->
@@ -68,13 +75,14 @@
                 <div class="entry-header">
                     <h3>
                         Austin Custom Home Build Platform
-                        <a href="https://remishi.com" target="_blank" rel="noopener">remishi.com</a>
+                        <a class="view-source" href="https://remishi.com" 
+                            target="_blank" rel="noopener">remishi.com</a>
                     </h3>
                     <span class="time-period">May 2026 - Present</span>
                 </div>
                 <p class="entry-summary">
-                    A platform that helps homeowners find buildable lots, understand the constraints
-                    on them, and assemble the team needed to actually build.
+                    A platform that helps homeowners find buildable lots, understand their 
+                    constraints, and assemble the team needed to actually build.
                 </p>
                 <ul>
                     <li>
@@ -91,19 +99,28 @@
                         gate any compliance-affecting (sensitive) change behind human approval.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>FastAPI</li>
+                    <li>Next.js</li>
+                    <li>PostgreSQL</li>
+                    <li>Railway</li>
+                    <li>Vercel</li>
+                    <li>Agentic Workflow</li>
+                    <li>TypeScript</li>
+                </ul>
             </article>
 
             <article class="entry">
                 <div class="entry-header">
                     <h3>
                         Per-Patient HbA1c Prediction &amp; Prediabetes Screener
-                        <a>View Report: TODO</a>
+                        <a class="view-source" href="files/CSML_Final_Project.pdf" 
+                            target="_blank" rel="noopener">View Report (PDF)</a>
                     </h3>
                     <span class="time-period">March 2026 - Present</span>
                 </div>
                 <p class="entry-summary">
-                    More 1 in 3 American adults are classified as prediabetic. This project can screen 
+                    More than 1 in 3 American adults are classified as prediabetic. This project can screen 
                     for prediabetes using five features a patient can measure themselves. It can also
                     predict continuous HbA1c levels if a patient has existing lab data.
                 </p>
@@ -124,14 +141,23 @@
                         Served the model end-to-end to a SwiftUI iOS app through a FastAPI REST endpoint.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>XGBoost</li>
+                    <li>SHAP</li>
+                    <li>Python</li>
+                    <li>SwiftUI</li>
+                    <li>iOS</li>
+                    <li>Pandas</li>
+                    <li>Scikit-learn</li>
+                </ul>
             </article>
 
             <article class="entry">
                 <div class="entry-header">
                     <h3>
                         ELECTRA QA Model
-                        <a>View Report: TODO</a>
+                        <a class="view-source" href="files/NLP_Final_Project.pdf" 
+                            target="_blank" rel="noopener">View Report (PDF)</a>
                     </h3>
                     <span class="time-period">November 2025 - December 2025</span>
                 </div>
@@ -152,14 +178,22 @@
                         the CheckList failure rate from 62% to 43%.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>Python</li>
+                    <li>Pytorch</li>
+                    <li>LoRA</li>
+                    <li>CheckList</li>
+                    <li>HuggingFace</li>
+                    <li>Scikit-learn</li>
+                </ul>
             </article>
 
             <article class="entry">
                 <div class="entry-header">
                     <h3>
                         Pass The Aux
-                        <a>View Source/Demo?: TBD</a>
+                        <a class="view-source" href="https://github.com/Cbooch13/PassTheAux"
+                            target="_blank" rel="noopener">View Source</a>
                     </h3>
                     <span class="time-period">January 2025 - April 2025</span>
                 </div>
@@ -177,7 +211,14 @@
                         Displays Spotify and local listening history on each user's profile.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>Kotlin</li>
+                    <li>Android</li>
+                    <li>Firebase</li>
+                    <li>Android SDK</li>
+                    <li>REST APIs</li>
+                    <li>Oauth</li>
+                </ul>
             </article>
         </section>
 
@@ -203,7 +244,12 @@
                         model output, feeding failures into RLHF pipelines.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>RLHF</li>
+                </ul>
             </article>
 
             <article class="entry">
@@ -232,7 +278,17 @@
                         cutting translation costs by 49%.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>Python</li>
+                    <li>Java</li>
+                    <li>Android</li>
+                    <li>Jira</li>
+                    <li>Jenkins</li>
+                    <li>C++</li>
+                    <li>Firebase</li>
+                    <li>iOS</li>
+                    <li>Swift</li>
+                </ul>
             </article>
 
             <article class="entry">
@@ -253,7 +309,14 @@
                         to test the firmware's overheating response.
                     </li>
                 </ul>
-                <p class="stack">Stack: TODO</p>
+                <ul class="stack">
+                    <li>C</li>
+                    <li>Firmware Testing</li>
+                    <li>Embedded Systems</li>
+                    <li>GDB</li>
+                    <li>Jenkins</li>
+                    <li>Jira</li>
+                </ul>
             </article>
         </section>
 
@@ -270,8 +333,8 @@
                 </div>
                 <p class="role">University of Texas at Austin | GPA: 3.97</p>
                 <div class="note">
-                    <strong>Coursework:</strong>
-                    <ul>
+                    <strong>Relevant Coursework:</strong>
+                    <ul class="stack">
                         <li>Deep Learning</li>
                         <li>Advances in Deep Learning</li>
                         <li>Machine Learning</li> 
@@ -341,10 +404,7 @@
                 <ul>
                     <li>PostgreSQL</li>
                     <li>PostGIS</li>
-                    <li>AWS S3</li>
-                    <li>CloudFront</li>
-                    <li>ACM</li>
-                    <li>IAM</li>
+                    <li>AWS</li>
                     <li>Firebase</li>
                     <li>Railway</li>
                     <li>Vercel</li>
@@ -370,27 +430,29 @@
     </main>
 
     <!-- Contact Information -->
-    <footer id="contact" class="wrap">
-        <h2 class="section-header">Get in Touch</h2>
-        <p class="footer-summary">
-            I'm searching for backend and ML roles, and I'm happy to talk through anything
-            on this page. Email is the fastest way to reach me, and thanks again for looking
-            through my site :)
-        </p>
+    <footer id="contact" class="footer">
+        <div class="wrap">
+            <h2 class="section-header">Get in Touch</h2> 
+            <p class="footer-summary">
+                I'm searching for backend and ML roles, and I'm happy to talk through anything
+                on this page. Email is the fastest way to reach me, and thanks again for looking
+                through my site :)
+            </p>
 
-        <button id="copy-email-button" type="button">
-            calebbucci13@gmail.com
-            <span class="icon i-copy"></span>
-            <span class="icon i-check"></span>
-        </button>
-        <nav class="contact-links">
-            <a href="mailto:calebbucci13@gmail.com" class="i-mail"></a>
-            <a href="https://www.linkedin.com/in/caleb-bucci" class="i-linkedin" 
-                target="_blank" rel="noopener"></a>
-            <a href="https://www.github.com/Cbooch13" class="i-github"
-                target="_blank" rel="noopener"></a>
-        </nav>
-        
+            <button id="copy-email-button" type="button">
+                calebbucci13@gmail.com
+                <span class="icon i-copy"></span>
+                <span class="icon i-check"></span>
+            </button>
+            <nav class="contact-links">
+                <a href="mailto:calebbucci13@gmail.com" class="i-mail"></a>
+                <a href="https://www.linkedin.com/in/caleb-bucci" class="i-linkedin" 
+                    target="_blank" rel="noopener"></a>
+                <a href="https://www.github.com/Cbooch13" class="i-github"
+                    target="_blank" rel="noopener"></a>
+            </nav>
+            <p class="closing-remark">Static HTML on AWS. Source on <a href="https://github.com/Cbooch13/Cbooch13.github.io">GitHub</a>.</p>
+        </div>
     </footer>
 
 
